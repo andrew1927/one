@@ -251,7 +251,7 @@ main section:nth-of-type(3) input::placeholder {
 }
 .item-wrapper > p {
     margin-bottom: 19px;
-    padding: 0% 19%;
+    padding: 0 19%;
     font: 500 22px "Roboto";
     background: #fff;
     border-radius: 0 0 34px 34px;
@@ -282,9 +282,6 @@ main > section:nth-of-type(3) {
     color: #373737;
     text-align: center;
 }
-main > section:nth-of-type(3) p {
-    /* margin-top: 5%; */
-}
 main > section:nth-of-type(3) form {
     height: 840px;
     display: flex;
@@ -292,32 +289,30 @@ main > section:nth-of-type(3) form {
     justify-content: space-between;
     align-items: center;
 }
+main > section:nth-of-type(2) input,
 main > section:nth-of-type(3) input {
-     width: 75%;
      border: 1px solid #080707;
      font-size: 1.125rem;
      padding: 2%;
      height: 34px;
  }
 main > section:nth-of-type(3) input[type="checkbox"] {
-    /* margin: 5% auto; */
     width: 67px;
     height: 62px;
 }
 main > section:nth-of-type(3) input[type="checkbox"] {
-    /* display: block; */
-    /* margin: 7% auto; */
     width: 67px;
     height: 62px;
 }
 .form-label {
     font: 500 1.67rem "Roboto";
 }
-main > section:nth-of-type(3) input[type="submit"] {
+main > section:nth-of-type(3) input[type="submit"],
+main > section:nth-of-type(2) input[type="submit"] {
+    padding-top: 15px;
     border: none;
-    /* margin: 8% auto; */
     width: 212px;
-    height: 53px;
+    height: 55px;
     color: #fff;
     font-size: 24px;
     background: rgba(62, 158, 255, 0.8);
@@ -331,6 +326,12 @@ main > section:nth-of-type(3) ul {
 main > section:nth-of-type(3) ul > li {
     width: 46px;
     height: 46px;
+}
+.map {
+    width: 268px;
+    height: 184px;
+    background: url("../images/map-mobile.png") no-repeat;
+    background-size: contain;
 }
 .facebook {
     background: url("../images/facebook-icon-mobile.png") no-repeat;
@@ -413,6 +414,11 @@ footer a {
     html {
         font-size: 32px;
     }
+    .alignment-wrapper,
+    .content-wrapper {
+        width: 1479px;
+        margin: 0 auto;
+    }
     .logo{
         width: 220px;
         height: 63px;
@@ -423,7 +429,7 @@ footer a {
     header .alignment-wrapper {
         font: 300 0.5rem "Roboto";
         color: #2a94fb;
-        width: 91%;
+        width: 1479px;
         justify-content: center;
     }
     .open-menu-btn {
@@ -446,7 +452,6 @@ footer a {
     padding: 0.35rem 0;
     }
     main > section:first-of-type {
-        width: 100%;
         justify-content: flex-end;
         height: 1151px;
         background: url("../images/section1-bg-desktop.png") no-repeat center;
@@ -578,6 +583,7 @@ footer a {
         text-transform: uppercase;
     }
     .btn-wrapper > h3 {
+        /* margin: 0 2.4rem; */
         font: 700 1.125rem "Roboto";
         color: #000;
         text-transform: uppercase;
@@ -650,7 +656,6 @@ footer a {
         position: relative;
     }
     .item-wrapper {
-        /* margin-top: 0; */
         position: absolute;
         width: 200px;
         height: 200px;
@@ -682,4 +687,192 @@ footer a {
         top: 148px;
         left: 584px;
     }
+    .alignment-wrapper > section:nth-of-type(4) h2 {
+        margin: 9% auto 8%;
+    }
+    .alignment-wrapper > section:last-of-type th,
+    .alignment-wrapper > section:last-of-type td {
+        border: 1px solid #d0d0d0;
+    }
+    .alignment-wrapper > section:last-of-type table h3 {
+        text-align: right;
+        font: 500 0.875rem "Roboto";
+        text-transform: uppercase;
+        margin-bottom: 12%;
+    }
+    .alignment-wrapper > section:last-of-type table p {
+        font: 300 0.625rem "Roboto";
+    }
+    .calendar {
+        text-align: right;
+        position: relative;
+        margin-right: 14%;
+    }
+    .calendar:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 107%;
+        width: 20px;
+        height: 21px;
+        background: url("../images/calander-icon.png") no-repeat;
+        background-size: contain;
+    }
+    .alignment-wrapper > section:last-of-type table {
+        width: 66%;
+        margin-bottom: 2%;
+    }
+    .alignment-wrapper > section:last-of-type tbody > tr:first-of-type td,
+    .alignment-wrapper > section:last-of-type tbody > tr:last-of-type td {
+        border-top-width: 0;
+        border-bottom-width: 0;
+        height: 40px;
+    }
+    .alignment-wrapper > section:last-of-type td {
+        padding: 1%;
+        width: 33%;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+    .alignment-wrapper > section:last-of-type tbody > tr:first-of-type td:first-of-type,
+    .alignment-wrapper > section:last-of-type tbody > tr:last-of-type td:first-of-type,
+    .alignment-wrapper > section:last-of-type tbody > tr:nth-of-type(2) td:first-of-type {
+        border-left-width: 0;
+    }
+    .alignment-wrapper > section:last-of-type tbody > tr:first-of-type td:last-of-type,
+    .alignment-wrapper > section:last-of-type tbody > tr:last-of-type td:last-of-type,
+    .alignment-wrapper > section:last-of-type tbody > tr:nth-of-type(2) td:last-of-type {
+        border-right-width: 0;
+    }
+    .alignment-wrapper > section:last-of-type table:nth-of-type(even) tbody tr:nth-of-type(2) td:last-of-type p {
+       text-align: right;
+    }
+    .alignment-wrapper > section:last-of-type table:nth-of-type(even) tbody tr:nth-of-type(2) td:last-of-type p:before {
+        left: 7%;
+    }
+    main > section:nth-of-type(2) h2{
+        margin-top: 9%;
+    }
+    .text-block.column4 {
+        width: 100%;
+        margin-bottom: 5%;
+        box-sizing: border-box;
+        text-transform: uppercase;
+    }
+    .text-block.column4 > p:first-of-type {
+        padding: 1%;
+        font: 700 0.875rem "Roboto";
+        border-bottom: 1px solid #fff;
+    }
+    .text-block.column4 > p:last-of-type {
+        padding: 2%;
+    }
+    main > section:nth-of-type(2) h2:nth-of-type(2) {
+        margin-top: 0;
+    }
+    .center-block {
+        display: flex;
+        justify-content: space-between;
+    }
+    main > section:nth-of-type(2) .center-block input {
+        font: 500 0.75rem "Roboto";
+        color: #565656;
+        margin: 3% 0 3%;
+        width: 44%;
+        height: 0.4rem;
+        background: transparent;
+    }
+    main > section:nth-of-type(2) textarea {
+        background: transparent;
+        font: 500 0.75rem "Roboto";
+        width: 100%;
+        height: 5rem;
+        border: 1px solid #535454;
+        margin-bottom: 4%;
+        padding: 1%;
+        color: #565656;
+        box-sizing: border-box;
+    }
+    main > section:nth-of-type(2) {
+        width: 100%;
+        height: 1066px;
+        background: url("../images/section6-bg.png") no-repeat;
+        background-size: cover;
+    }
+    .center-submit {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    main > section:nth-of-type(3) h2 {
+        margin: 5% auto 7%;
+    }
+    main > section:nth-of-type(3) h3 {
+        margin-bottom: 2%;
+        font: 900 0.875rem "Roboto";
+    }
+    main > section:nth-of-type(3) p {
+        font: 300 0.875rem "Roboto";
+    }
+    main > section:nth-of-type(3) .center-wrapper > p:first-of-type {
+        margin-bottom: 2%;
+    }
+    main > section:nth-of-type(3) .center-wrapper > p:nth-of-type(2) {
+        width: 21%;
+        margin: 0 auto;
+    }
+    .registration-wrapper > img {
+        width: 667px;
+        height: 454px;
+    }
+    main > section:nth-of-type(3) .registration-wrapper {
+        display: flex;
+        height: 564px;
+    }
+    main > section:nth-of-type(3) input {
+        font-size: 0.75rem;
+        width: 450px;
+    }
+    main > section:nth-of-type(3) {
+        background: url("../images/place-bg-desktop.png") no-repeat;
+        background-size: cover;
+    }
+    main > section:nth-of-type(3) > .center-wrapper {
+        width: 1400px;
+    }
+    main > section:nth-of-type(3) form {
+        height: auto;
+    }
+    .map {
+        margin-right: 3%;
+        width: 667px;
+        height: 454px;
+        background: url("../images/map-desktop.png") no-repeat;
+        background-size: contain;
+    }
+    main > section:nth-of-type(3) .form-label {
+        margin-top: 1%;
+        font: 500 0.7rem  "Roboto";
+    }
+    main > section:nth-of-type(3) input[type="checkbox"] {
+        width: 39px;
+        height: 39px;
+    }
+    .check-box-center {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    main > section:nth-of-type(3) ul {
+        width: auto;
+        margin: 7% auto 4%;
+    }
+    main > section:nth-of-type(3) ul > li {
+        margin-right: 10px;
+    }
+    main > section:nth-of-type(3) input[type="submit"] {
+        margin-left: 53%;
+    }
+    footer p {
+        font-size: 0.55rem;
+    }
+
 }
