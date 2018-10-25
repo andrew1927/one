@@ -242,6 +242,9 @@ main section:nth-of-type(3) input::placeholder {
     width: 42px;
     height: 42px;
 }
+.info-text {
+    padding: 0 9%;
+}
 .link-icon {
     margin-bottom: 8%;
 }
@@ -283,7 +286,7 @@ main > section:nth-of-type(3) {
     text-align: center;
 }
 main > section:nth-of-type(3) form {
-    height: 840px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -291,6 +294,7 @@ main > section:nth-of-type(3) form {
 }
 main > section:nth-of-type(2) input,
 main > section:nth-of-type(3) input {
+     min-width: 258px;
      border: 1px solid #080707;
      font-size: 1.125rem;
      padding: 2%;
@@ -302,6 +306,7 @@ main > section:nth-of-type(3) input[type="checkbox"] {
 }
 main > section:nth-of-type(3) input[type="checkbox"] {
     width: 67px;
+    min-width: 67px;
     height: 62px;
 }
 .form-label {
@@ -311,7 +316,7 @@ main > section:nth-of-type(3) input[type="submit"],
 main > section:nth-of-type(2) input[type="submit"] {
     padding-top: 15px;
     border: none;
-    width: 212px;
+    min-width: 216px;
     height: 55px;
     color: #fff;
     font-size: 24px;
@@ -324,6 +329,7 @@ main > section:nth-of-type(3) ul {
    justify-content: space-between;
 }
 main > section:nth-of-type(3) ul > li {
+    margin: 0 1%;
     width: 46px;
     height: 46px;
 }
@@ -365,6 +371,9 @@ footer p {
 footer a {
     color: #2a509a;
 }
+.map {
+    margin: 0 auto 2rem;
+}
 
 @media screen and (min-width: 660px) {
     .items-wrapper {
@@ -372,6 +381,13 @@ footer a {
     }
 }
 @media screen and (min-width: 768px) {
+    .map {
+        width: 667px;
+        height: 454px;
+        margin: 0 auto 2rem;
+        background: url("../images/map-desktop.png") no-repeat;
+        background-size: contain;
+    }
     html {
        font-size: 24px;
     }
@@ -402,15 +418,24 @@ footer a {
         width: 65%;
     }
     main > section:nth-of-type(3) ul {
-        width: 60%;
         margin: 7% auto;
         padding: 0 5%;
     }
-    main > section:nth-of-type(3) .registration-wrapper {
-        height: 1400px;
+    @media screen and (min-width: 930px) {
+        .items-wrapper {
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 1100px) {
+        .items-wrapper {
+            width: 44%;
+        }
     }
 }
 @media screen and (min-width: 1479px) {
+    .map {
+        margin: 0;
+    }
     html {
         font-size: 32px;
     }
@@ -844,13 +869,12 @@ footer a {
     }
     .map {
         margin-right: 3%;
-        width: 667px;
-        height: 454px;
         background: url("../images/map-desktop.png") no-repeat;
         background-size: contain;
     }
     main > section:nth-of-type(3) .form-label {
         margin-top: 1%;
+        margin-right: 5px;
         font: 500 0.7rem  "Roboto";
     }
     main > section:nth-of-type(3) input[type="checkbox"] {
@@ -869,7 +893,8 @@ footer a {
         margin-right: 10px;
     }
     main > section:nth-of-type(3) input[type="submit"] {
-        margin-left: 53%;
+        max-width: 216px;
+        margin-left: 7.5rem;
     }
     footer p {
         font-size: 0.55rem;
